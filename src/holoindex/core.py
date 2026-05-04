@@ -565,19 +565,19 @@ class HoloIndex:
 
     def check_module_exists(self, module_name: str) -> Dict[str, Any]:
         """WSP Compliance: Check if a module exists before code generation."""
-        from holoindex.introspection_engine import check_module_exists as _chk
+        from holoindex.introspection import check_module_exists as _chk
         return _chk(self, module_name)
 
     def _extract_typescript_entities(self, file_path: Path) -> Dict[str, Dict[str, Any]]:
         """Parse TypeScript/TSX file for entity metadata with simple caching."""
-        from holoindex.introspection_engine import _extract_typescript_entities as _ets
+        from holoindex.introspection import _extract_typescript_entities as _ets
         return _ets(self, file_path)
 
     def _enhance_code_results_with_previews(self, code_hits: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         """Enhance code results with AST-based previews for empty results."""
-        from holoindex.introspection_engine import enhance_code_results_with_previews as _enhance
+        from holoindex.introspection import enhance_code_results_with_previews as _enhance
         return _enhance(self, code_hits)
 
 
 # Re-export for import stability: from holo_index.core.holo_index import parse_typescript_entities
-from holoindex.introspection_engine import parse_typescript_entities  # noqa: F401
+from holoindex.introspection import parse_typescript_entities  # noqa: F401
