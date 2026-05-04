@@ -20,10 +20,10 @@ from datetime import datetime
 from typing import Any, Dict, List, Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from holoindex.holo_index import HoloIndex
+    from holoindex.core import HoloIndex
 
 # Re-use the module-level timeout helper already in holo_index.py
-from holoindex.holo_index import _run_with_timeout, HOLO_ENCODE_TIMEOUT
+from holoindex.core import _run_with_timeout, HOLO_ENCODE_TIMEOUT
 
 logger = logging.getLogger(__name__)
 

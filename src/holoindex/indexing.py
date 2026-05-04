@@ -24,7 +24,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, TYPE_CHECKING
 
 if TYPE_CHECKING:
-    from holoindex.holo_index import HoloIndex
+    from holoindex.core import HoloIndex
 
 logger = logging.getLogger(__name__)
 
